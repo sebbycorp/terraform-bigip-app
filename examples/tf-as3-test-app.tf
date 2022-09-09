@@ -1,5 +1,6 @@
 module "app" {
-  source            = "sebbycorp/app/bigip"
+  source  = "sebbycorp/app/bigip"
+  version = "1.0.1"
   tenant            = "tf-as3-test"
   common_name       = "tf-as3-test.maniak.academy"
   as3tmpl           = "shttps"
@@ -10,5 +11,5 @@ module "app" {
   monitor           = "https"
   load_balancing_mode = "least-connections-member"
   pool_members      = ["10.11.5.1", "10.11.5.2", "10.11.5.3"]
-  version = "1.0.0"
 }
+
