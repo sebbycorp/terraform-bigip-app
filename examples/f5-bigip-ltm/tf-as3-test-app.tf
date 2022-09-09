@@ -1,5 +1,5 @@
-module "tf-as3-test" {
-  source            = "./f5-bigip-ltm"
+module "app" {
+  source            = "sebbycorp/app/bigip"
   tenant            = "tf-as3-test"
   common_name       = "tf-as3-test.maniak.academy"
   as3tmpl           = "shttps"
@@ -10,4 +10,5 @@ module "tf-as3-test" {
   monitor           = "https"
   load_balancing_mode = "least-connections-member"
   pool_members      = ["10.11.5.1", "10.11.5.2", "10.11.5.3"]
+  version = "1.0.0"
 }
