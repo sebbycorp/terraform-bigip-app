@@ -5,7 +5,7 @@ The following module allows you to deploy a secure F5 HTTPS vip in your environm
 ![title](./images/main.png)
 
 ## How to use the module.. 
-The module expects some inputs on your application, 
+Example of using the module
 
 module "app1" {
   source  = "sebbycorp/app/bigip"
