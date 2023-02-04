@@ -68,8 +68,9 @@ vault secrets tune -max-lease-ttl=87600h pki
 
 ```
 vault write -field=certificate pki/root/generate/internal \
-     common_name="example.com" \
+     common_name=maniak.academy \
      ttl=87600h > CA_cert.crt# Configure the CA and CRL URL
+
 vault write pki/config/urls \
      issuing_certificates="$VAULT_ADDR/v1/pki/ca" \
      crl_distribution_points="$VAULT_ADDR/v1/pki/crl"
