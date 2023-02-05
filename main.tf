@@ -1,8 +1,11 @@
-
+resource "vault_namespace" "nspath" {
+  path = var.vault_namespace
+}
 resource "vault_pki_secret_backend_cert" "app" {
   backend     = var.vault_pki_backend
   name        = var.pki_name
   common_name = var.common_name
+  namespace   = vault_namespace.nspath.path
 }
 
 resource "bigip_as3" "app_services" {
