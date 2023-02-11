@@ -53,8 +53,3 @@ variable "vault_pki_backend" {
   type        = string
 
 }
-
-variable "vault_namespace" {
-  description = "Vault namespace"
-  type        = string
-}
